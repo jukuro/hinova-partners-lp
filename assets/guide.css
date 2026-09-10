@@ -1,0 +1,99 @@
+/* パートナーガイド（/guide/）用。style.css の上に重ねて使う */
+.guide-badge { display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent-dark); background: var(--accent-soft); border-radius: 999px; padding: 2px 10px; margin-left: 8px; vertical-align: middle; letter-spacing: 0; }
+
+.guide-hero { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%); color: #fff; padding: 40px 0 34px; }
+.guide-hero .crumb { font-size: 13px; color: #A7F3D0; margin-bottom: 8px; }
+.guide-hero .crumb a { color: #D1FAE5; text-decoration: none; font-weight: 600; }
+.guide-hero h1 { font-size: 26px; line-height: 1.5; font-weight: 800; }
+.guide-hero .meta { font-size: 13px; color: #A7F3D0; margin-top: 8px; }
+.guide-hero.top { text-align: center; padding: 56px 0 48px; }
+.guide-hero.top h1 { font-size: 28px; margin-bottom: 12px; }
+.guide-hero.top p { color: #D1FAE5; font-size: 16px; }
+.guide-hero.top .btn { margin-top: 24px; background: #fff; color: var(--accent-dark); }
+
+.doc { max-width: 760px; margin: 0 auto; padding: 36px 20px 20px; }
+
+/* 本文 */
+.prose { font-size: 16px; line-height: 1.85; }
+.prose > * + * { margin-top: 16px; }
+.prose h2 { text-align: left; font-size: 21px; margin-top: 44px; margin-bottom: 0; padding: 0 0 8px 14px; border-left: 5px solid var(--accent); border-bottom: 1px solid var(--border); }
+.prose h2::after { display: none; }
+.prose h3 { font-size: 18px; margin-top: 32px; color: var(--accent-deep); }
+.prose h4 { font-size: 16px; margin-top: 24px; }
+.prose p, .prose li { color: var(--text); }
+.prose ul, .prose ol { padding-left: 1.5em; }
+.prose li + li { margin-top: 6px; }
+.prose a { color: var(--accent-dark); font-weight: 700; text-underline-offset: 3px; }
+.prose strong { background: linear-gradient(transparent 62%, var(--accent-soft) 62%); }
+.prose hr { border: none; border-top: 1px dashed var(--border); margin: 36px 0; }
+.prose code { font-family: Consolas, Menlo, monospace; font-size: 14px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; word-break: break-all; }
+.prose pre { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; overflow-x: auto; line-height: 1.6; }
+.prose pre code { background: none; border: none; padding: 0; font-size: 13px; word-break: normal; white-space: pre; }
+.prose blockquote { background: var(--bg-alt); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; color: var(--text); }
+.prose blockquote > * + * { margin-top: 8px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: 10px; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; }
+.prose th, .prose td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+.prose th { background: var(--bg-alt); color: var(--accent-deep); font-weight: 700; white-space: nowrap; }
+.prose tr:last-child td { border-bottom: none; }
+
+/* 前へ・次へ */
+.doc-nav { display: flex; gap: 12px; margin: 48px 0 12px; }
+.doc-nav a { flex: 1; display: block; border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; color: var(--text); background: #fff; min-height: 44px; }
+.doc-nav a:hover { border-color: var(--accent); }
+.doc-nav small { display: block; color: var(--text-sub); font-size: 12px; }
+.doc-nav strong { color: var(--accent-dark); font-size: 15px; }
+.doc-nav .next { text-align: right; }
+.back-top { text-align: center; margin: 8px 0 40px; }
+.back-top a { color: var(--accent-dark); font-weight: 700; }
+
+/* トップ：はじめの手順 */
+.start-steps { list-style: none; max-width: 720px; margin: 0 auto; counter-reset: step; }
+.start-steps li { position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 18px 18px 72px; margin-bottom: 12px; counter-increment: step; }
+.start-steps li::before { content: counter(step); position: absolute; left: 18px; top: 18px; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.start-steps h3 { font-size: 16px; margin-bottom: 4px; }
+.start-steps p { font-size: 14px; color: var(--text-sub); }
+.start-steps a { color: var(--accent-dark); font-weight: 700; }
+.start-steps li.important { border: 2px solid var(--accent); background: var(--bg-alt); }
+.tag { display: inline-block; font-size: 11px; font-weight: 800; color: #fff; background: #DC2626; border-radius: 4px; padding: 1px 6px; margin-left: 6px; vertical-align: 2px; }
+
+.doc-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 900px; margin: 0 auto; }
+.doc-card { display: block; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-decoration: none; color: var(--text); min-height: 44px; transition: border-color .2s; }
+.doc-card:hover { border-color: var(--accent); }
+.doc-card .no { font-size: 12px; font-weight: 800; color: var(--accent); }
+.doc-card h3 { font-size: 16px; margin: 2px 0 4px; color: var(--accent-deep); }
+.doc-card p { font-size: 13px; color: var(--text-sub); }
+
+.contact-box { max-width: 720px; margin: 0 auto; text-align: center; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.contact-box a { color: var(--accent-dark); font-weight: 800; font-size: 17px; }
+
+/* 紹介先向けページ（HINOVA中立デザイン） */
+body.customer header { border-bottom-color: #2563EB; }
+body.customer .logo { color: #1D4ED8; }
+body.customer .guide-hero { background: linear-gradient(135deg, #2563EB 0%, #1E3A8A 100%); }
+body.customer .guide-hero .crumb, body.customer .guide-hero .meta { color: #BFDBFE; }
+body.customer .prose h2 { border-left-color: #2563EB; }
+body.customer .prose h3 { color: #1E3A8A; }
+body.customer .prose a { color: #1D4ED8; }
+body.customer .prose strong { background: linear-gradient(transparent 62%, #DBEAFE 62%); }
+body.customer .prose blockquote { border-left-color: #2563EB; background: #EFF6FF; }
+body.customer .prose th { background: #EFF6FF; color: #1E3A8A; }
+body.customer footer { background: #1E3A8A; color: #BFDBFE; }
+body.customer footer .copy { color: #BFDBFE; }
+
+.header-inner { gap: 12px; }
+.logo { white-space: nowrap; }
+nav a { white-space: nowrap; }
+
+@media (max-width: 767px) {
+  .logo { font-size: 17px; }
+  .guide-badge { display: none; }
+  nav a { margin-left: 0; font-size: 13px; }
+  .guide-hero h1 { font-size: 21px; }
+  .guide-hero.top h1 { font-size: 23px; }
+  .prose { font-size: 15px; }
+  .prose h2 { font-size: 18px; }
+  .doc-nav { flex-direction: column; }
+  .doc-nav .next { text-align: left; }
+  .start-steps li { padding-left: 64px; }
+}
